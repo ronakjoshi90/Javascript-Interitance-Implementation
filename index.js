@@ -18,7 +18,7 @@ function Employee(name, age, department) {
   this.department = department;
 }
 
-Employee.prototype.getDepartmen = function() {
+Employee.prototype.getDepartment = function() {
   console.log('dept of person is ' + this.department);
   return this.department;
 };
