@@ -18,12 +18,12 @@ function Employee(name, age, department) {
   this.department = department;
 }
 
+Employee.prototype = Object.create(Person.prototype);
+
 Employee.prototype.getDepartment = function() {
   console.log('dept of person is ' + this.department);
   return this.department;
 };
-
-Employee.prototype = Object.create(Person.prototype);
 
 var ronak = new Person('Tom', 31);
 var res = ronak.getAge();
@@ -35,3 +35,4 @@ console.log(personObj);
 
 personObj.getAge();
 personObj2.getAge();
+personObj2.getDepartment();
